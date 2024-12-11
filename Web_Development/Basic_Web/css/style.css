@@ -1,0 +1,27 @@
+p{
+    color: aqua;
+}
+.email{
+    color: rgb(0, 255, 55);
+}
+.addr{
+    color: rgb(235, 19, 19);
+}
+p#lin{
+  color: blueviolet;
+}
+.header {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  padding: 10px; 
+}
+/* table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+} */
