@@ -1,0 +1,30 @@
+body{
+    align-items: center;
+    font-size: smaller;
+}
+.card{
+    padding: 5px;
+    position: absolute;
+    background-color: rgb(255, 238, 218);
+    width: 50%;
+    max-width: 400%;
+}
+h4#head{
+    text-align: center;
+    font-size: large;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+input#pass,#user{
+    width: 70%;
+    float: right;
+}
