@@ -40,9 +40,9 @@ def about():
             ]
     return render_template('about.html', title="About", game=game)
 
-@app.route('/contact')
-def contact():
-    return render_template('contact.html', title="Contact")
+@app.route('/players')
+def players():
+    return render_template('players/index.html', title="Players")
 
 @app.route('/clubs')
 def clubs():
@@ -64,9 +64,22 @@ def update(id):
         return redirect(url_for('clubs'))
     return render_template('clubs/update.html', title='Update', team=team)
 
-@app.route('/clubs/delete/<int:id>')
-def delete():
-    return render_template('clubs/delete.html', title='Delete')
+@app.route('/clubs/delete/<int:id>', methods=['GET', 'POST'])
+def delete(id):
+    global teams  
+    team = None
+
+    for t in teams:
+        if t['id'] == id:
+            team = t
+            break
+    if request.method == 'POST':
+        teams = [t for t in teams if t['id'] != id]
+        return redirect(url_for('clubs'))
+    return render_template('clubs/delete.html', title='Delete Club', team=team)
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
