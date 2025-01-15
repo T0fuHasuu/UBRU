@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>{{title}}</h1><hr>
+        <h5><b>Games : </b></h5>
+        <ul>
+            {% for i in game %}
+                {% if i['favnum']==1 %}
+                    <li class="text-primary">{{i['Game']}}</li>
+                {% else %}
+                    <li class="text-success">{{i['Game']}}</li>
+                {% endif %}
+
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
+

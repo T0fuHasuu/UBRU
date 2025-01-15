@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>{{title}}</h1><hr>
+        <div class="card mb-3">
+            <div class="card-header text-bg-danger">Delete Confirmation</div>
+            <div class="card-body">
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="id" class="form-label">Club.ID:</label>
+                        <input type="text" class="form-control" id="id" value="{{team.id}}" name="id" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Club.Name:</label>
+                        <input type="text" class="form-control" id="name" value="{{team.league}}" name="name" readonly>
+                    </div>
+                    <p>Are you sure you want to delete this team?</p>
+                    <button type="submit" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Delete</button>
+                    <a href="{{url_for('clubs')}}" class="btn btn-outline-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

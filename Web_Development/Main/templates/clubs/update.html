@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>{{title}}</h1><hr>
+        <div class="card mb-3">
+            <div class="card-header text-bg-success">Rename</div>
+            <div class="card-body">
+                <form method="post">
+                <div class="mb-3">
+                    <label for="id" class="form-label">Club.ID : </label>
+                    <input type="text" class="form-control" id="id" placeholder="ID" value="{{team.id}}" 
+                   name="id" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Club.Name</label>
+                    <input type="text" class="form-control" id="name" value="{{team.league}}" name="name">
+                </div>
+                <button title="Update Club" type="submit" class="btn btn-outline-primary"><i class="bi bi-check"></i></button>
+                </form>
+            </div>
+        
+        </div>
+    </div>
+{% endblock %}
+
+
