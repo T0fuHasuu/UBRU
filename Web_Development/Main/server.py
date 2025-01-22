@@ -66,20 +66,11 @@ def update(id):
 
 @app.route('/clubs/delete/<int:id>', methods=['GET', 'POST'])
 def delete(id):
-    global teams  
-    team = None
-
-    for t in teams:
-        if t['id'] == id:
-            team = t
+    for i in range(len(teams)):
+        if teams[i]['id'] == id:
+            del teams[i]
             break
-    if request.method == 'POST':
-        teams = [t for t in teams if t['id'] != id]
-        return redirect(url_for('clubs'))
-    return render_template('clubs/delete.html', title='Delete Club', team=team)
-
-
-
+    return redirect(url_for('clubs'))
 
 if __name__ == '__main__':
     app.run(debug=True)
