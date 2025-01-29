@@ -1,76 +1,143 @@
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
 teams = [
-    {'id' : 1 , 'league' : 'Arsnal'},
-    {'id' : 2 , 'league' : 'Liverpool'},
-    {'id' : 3 , 'league' : 'Chelsea'},
-    {'id' : 4 , 'league' : 'Bacelona'},
-    {'id' : 5 , 'league' : 'Real Madrid'},
-    {'id' : 6 , 'league' : 'Paris'},
-    {'id' : 7 , 'league' : 'Cambodia'},
-    {'id' : 8 , 'league' : 'Manchester'},
-    {'id' : 9 , 'league' : 'Brentford'},
+  {'id':1, 'name':'Arsenal'},
+  {'id':2, 'name':'Aston Villa'},
+  {'id':3, 'name':'Bornemouth'},
+  {'id':4, 'name':'Brentford'},
+  {'id':5, 'name':'Brighton & Hove Albion'},
+  {'id':6, 'name':'Chelsea'},
+  {'id':7, 'name':'Crystal Palace'},
+  {'id':8, 'name':'Everton'},
+  {'id':9, 'name':'Fulham'},
+  {'id':10, 'name':'Ipswich Town'},
+  {'id':11, 'name':'Leicester City'},
+  {'id':12, 'name':'Liverpool'},
+  {'id':13, 'name':'Manchester City'},
+  {'id':14, 'name':'Manchester United'},
+  {'id':15, 'name':'Newcastle United'},
+  {'id':16, 'name':'Nottingham Forest'},
+  {'id':17, 'name':'Southampton'},
+  {'id':18, 'name':'Tottenham Hotspur'},
+  {'id':19, 'name':'West Ham United'},
+  {'id':20, 'name':'Wolverhampton Wonderers'},
+]
+
+footballers = [
+  {'id':1, 'name': 'Trent Alexander-Arnold', 'position':'Defender', 'club':'Liverpool', 'nationality':'England', 'img_url':'https://resources.premierleague.com/premierleague/photos/players/250x250/p169187.png'}
 ]
 
 @app.route('/')
-def home():
-    return render_template('index.html', title="Home")
+def index():
+  return render_template('index.html', title='Home Page')
 
-@app.route('/about')
-def about():
-    game = [
-            {
-                "Game": "Elden RinG",
-                "favnum": 1
-            },
-            {
-                "Game": "Valorant",
-                "favnum": 2
-            },
-            {
-                "Game": "CS:GO",
-                "favnum": 3
-            },
-            {
-                "Game": "DARK SOUL",
-                "favnum": 1
-            }
-            ]
-    return render_template('about.html', title="About", game=game)
+@app.route('/clubs', methods=['GET', 'POST'])
+def clubs():
+  if request.method == 'POST':
+    club_name = request.form['club_name']
+    # print(f'{club_name}')
+    club_list = []
+    for team in teams:
+      # print(f'{team}')
+      if club_name in team['name']:
+        # print(f'{team}')
+        club_list.append(team)
+    return render_template('clubs/index.html', title='Clubs Page', teams=club_list)
+  else:
+    return render_template('clubs/index.html', title='Clubs Page', teams=teams)
+
+@app.route('/clubs/update/<int:id>', methods=['GET', 'POST'])
+def update_club(id):
+  for t in teams:
+    if t['id'] == id:
+      team = t
+      break
+  
+  if request.method == 'POST':
+    id = request.form['id']
+    name = request.form['name']
+    # print(f'{name}, {id}')
+    for i in range(len(teams)):
+      # print(f'{teams[i]["name"]}, {teams[i]["id"]}')
+      if teams[i]['id'] == int(id):
+        # print(f'{i}')
+        teams[i]['name'] = name
+        break
+    
+    return redirect(url_for('clubs'))
+
+  return render_template('clubs/update_club.html', 
+                         title='Update Club', 
+                         team=team)
+
+@app.route('/clubs/delete/<int:id>')
+def delete_club(id):
+  for i in range(len(teams)): 
+    if teams[i]['id'] == id:
+      del teams[i]
+      break
+
+  return redirect(url_for('clubs'))
+
+@app.route('/clubs/new', methods=['GET', 'POST'])
+def new_club():
+  if request.method == 'POST':
+    name = request.form['name']
+    size = len(teams)
+    if size>0:
+      id = teams[size-1]['id'] + 1
+    else:
+      id = 1
+    team = {'id':id, 'name':name}
+    teams.append(team)
+
+    return redirect(url_for('clubs'))
+  
+  return render_template('clubs/new_club.html',
+                          title='Add New Club')
 
 @app.route('/players')
 def players():
-    return render_template('players/index.html', title="Players")
+  return render_template('players/index.html', 
+                         title='Players Page',
+                         footballers=footballers)
 
-@app.route('/clubs')
-def clubs():
-    return render_template('clubs/index.html', title = "Clubs", teams = teams)
+@app.route('/players/new', methods=['GET', 'POST'])
+def new_player():
+  if request.method == 'POST':
+    name = request.form['name']
+    position = request.form['position']
+    club = request.form['club']
+    nationality = request.form['nationality']
+    img_url = request.form['img_url']
 
-@app.route('/clubs/update/<int:id>', methods =['GET', 'POST'])
-def update(id):
-    for t in teams:
-        if t['id'] == id:
-            team = t
-            break
-    if request.method == 'POST':
-        league = request.form['name']    
-        id = request.form['id']    
-        for i in range(len(teams)):
-            if teams[i]['id'] == int(id):
-                teams[i]['league'] = league
-                break
-        return redirect(url_for('clubs'))
-    return render_template('clubs/update.html', title='Update', team=team)
+    size = len(footballers)
+    if size>0:
+      id = footballers[size-1]['id'] + 1
+    else:
+      id = 1
 
-@app.route('/clubs/delete/<int:id>', methods=['GET', 'POST'])
-def delete(id):
-    for i in range(len(teams)):
-        if teams[i]['id'] == id:
-            del teams[i]
-            break
-    return redirect(url_for('clubs'))
+    footballer = {'id':id, 'name': name, 'position':position, 'club':club, 'nationality': nationality, 'img_url': img_url}
+    footballers.append(footballer)
+    
+    return redirect(url_for('players'))
 
+  return render_template('players/new_player.html',
+                          title='Add New Player Page',
+                          teams=teams)
+
+@app.route('/players/details/<int:id>')
+def player_detail(id):
+  footballer = None
+  for f in footballers:
+    if f['id'] == id:
+      footballer = f
+      break
+  return render_template('players/player_detail.html',
+                         title='More Detail',
+                         footballer=footballer)
+  
 if __name__ == '__main__':
-    app.run(debug=True)
+  app.run(debug=True)

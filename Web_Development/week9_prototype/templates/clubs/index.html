@@ -1,0 +1,73 @@
+{% extends 'layout.html' %} {% block title %} {{title}} {% endblock %} {% block
+content %}
+<div class="container">
+  <h1>{{title}}</h1>
+  <hr />
+  <div class="row mb-4">
+    <div class="col-6 text-start">
+      <a href="{{ url_for('add') }}" class="btn btn-outline-success"
+        >Create New Team</a
+      >
+    </div>
+    <div class="col">
+      <form method="post">
+        <div class="input-group mb-3">
+          <input
+            name="club_name"
+            type="text"
+            class="form-control"
+            placeholder="Team"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <button class="btn btn-outline-info" type="submit" id="button-addon2">
+            Search <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header text-bg-danger">Football Club</div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Team</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% if teams %} {% for team in teams %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ team.league }}</td>
+            <td>
+              <a
+                href="{{ url_for('update', id=team.id) }}"
+                class="btn btn-outline-primary btn-sm"
+                title="Edit"
+              >
+                <i class="bi bi-pencil-square"></i>
+              </a>
+              <a
+                href="{{ url_for('delete', id=team.id) }}"
+                class="btn btn-outline-danger btn-sm"
+                title="Delete"
+              >
+                <i class="bi bi-trash"></i>
+              </a>
+            </td>
+          </tr>
+          {% endfor %} {% else %}
+          <tr>
+            <td colspan="3" class="text-center">No teams found</td>
+          </tr>
+          {% endif %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
