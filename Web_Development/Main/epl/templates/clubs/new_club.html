@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends 'layout.html' %}
 
 {% block title %}
   {{title}}
@@ -8,22 +8,22 @@
   <div class="container">
     <h1>{{title}}</h1>
     <hr>
-    <div class="card mb-3">
+    <div class="card">
       <div class="card-header text-bg-success">
-        เพิ่มชื่อสโมสรฟุตบอล
+        เพิ่มข้อมูลสโมสร
       </div>
       <div class="card-body">
         <form method="post">
           
           <div class="mb-3">
-            <label for="name" class="form-label">Club Name</label>
+            <label for="name" class="form-label">ชื่อสโมสร</label>
             <input type="text" class="form-control" id="name"
-              name="name">
+             name="name">
           </div>
           
           <button type="submit" class="btn btn-outline-primary">
-            <i class="bi bi-folder-plus"></i>
-            New Club
+            <i class="bi bi-house-add"></i>
+            Add New Club
           </button>
         </form>
       </div>

@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  {{title}}
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>{{title}}</h1>
+    <hr>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="{{footballer.img_url}}" alt="{{footballer.name}}" class="card-img-top">
+        </div>
+      </div>
+      <div class="col-md-8 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <h2 class="text-secondary">Personal Details</h2>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col"><h3>Name:</h3></div>
+              <div class="col">
+                <h3 class="text-secondary float-end">{{footballer.name}}</h3>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col"><h3>Position:</h3></div>
+              <div class="col">
+                <h3 class="text-secondary float-end">{{footballer.position}}</h3>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col"><h3>Club:</h3></div>
+              <div class="col">
+                <h3 class="text-secondary float-end">{{footballer.club}}</h3>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col"><h3>Nationality:</h3></div>
+              <div class="col">
+                <h3 class="text-secondary float-end">{{footballer.nationality}}</h3>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col">
+                <a href="{{url_for('players')}}" class="btn btn-outline-success">
+                  <i class="bi bi-skip-backward-circle"></i>
+                  Back to Player's Page
+                </a>
+              </div>
+              <div class="col">
+                <a href="#" class="btn btn-outline-success float-end">
+                  <i class="bi bi-person-fill-check"></i>
+                  Update Player
+                </a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+

@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  {{title}}
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>{{title}}</h1>
+    <hr>
+    <div class="row mb-3">
+      <div class="col">
+        <a href="{{url_for('new_player')}}" class="btn btn-outline-success">
+          <i class="bi bi-person-plus-fill"></i> Add New Player
+        </a>
+      </div>
+      <div class="col">
+        <form method="post">
+          <div class="input-group mb-3">
+            <input name="club_name" type="text" class="form-control" placeholder="Player's Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-success" type="submit" id="button-addon2">
+              <i class="bi bi-search"></i> Search
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header text-bg-success">
+        รายชื่อนักฟุตบอล
+      </div>
+      <div class="card-body">
+        <table class="table table-hover">
+          <thead>
+            <th>ลำดับ</th>
+            <th>ชื่อนักฟุตบอล</th>
+            <th>ตำแหน่ง</th>
+            <th>Action</th>
+          </thead>
+          <tbody>
+            {% for footballer in footballers %}
+                <tr>
+                  <td>{{loop.index}}</td>
+                  <td>{{footballer.name}}</td>
+                  <td>{{footballer.position}}</td>
+                  <td>
+                    <a title="More Detail" href="{{url_for('player_detail', id=footballer.id)}}" class="btn btn-outline-success btn-sm">
+                      <i class="bi bi-card-list"></i>
+                    </a>
+                    
+                  </td>
+                </tr>
+            {% endfor %}
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+

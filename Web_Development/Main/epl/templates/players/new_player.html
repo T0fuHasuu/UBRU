@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends 'layout.html' %}
 
 {% block title %}
   {{title}}
@@ -8,52 +8,49 @@
   <div class="container">
     <h1>{{title}}</h1>
     <hr>
-    <div class="card mb-3">
+    <div class="card">
       <div class="card-header text-bg-success">
-        เพิ่มชื่อนักฟุตบอล
+        เพิ่มข้อมูลนักฟุตบอล
       </div>
       <div class="card-body">
         <form method="post">
           
           <div class="mb-3">
-            <label for="name" class="form-label">Player Name</label>
+            <label for="name" class="form-label">ชื่อนักฟุตบอล</label>
             <input type="text" class="form-control" id="name"
-              name="name">
+             name="name">
           </div>
           <div class="mb-3">
-            <label for="name" class="form-label">Position</label>
+            <label for="position" class="form-label">ตำแหน่ง</label>
             <select name="position" class="form-select" aria-label="Default select example">
               <option selected value="Defender">Defender</option>
-              <option value="Forward">Forward</option>
               <option value="Midfielder">Midfielder</option>
+              <option value="Forward">Forward</option>
               <option value="Goalkeeper">Goalkeeper</option>
             </select>
           </div>
           <div class="mb-3">
-            <label for="name" class="form-label">Club</label>
+            <label for="club" class="form-label">สโมสรที่สังกัด</label>
             <select name="club" class="form-select" aria-label="Default select example">
-              {% for team in teams %}
-                  
-                  <option value="{{team.name}}">{{team.name}}</option>
-                  
-                  
+              {% for t in teams %}
+                  <option value="{{t.name}}">{{t.name}}</option>
               {% endfor %}
-              
               
             </select>
           </div>
           <div class="mb-3">
-            <label for="name" class="form-label">Nationality</label>
-            <input type="text" class="form-control" id="name"
-              name="nationality">
+            <label for="nationality" class="form-label">สัญชาตินักฟุตบอล</label>
+            <input type="text" class="form-control" id="nationality"
+             name="nationality">
           </div>
           <div class="mb-3">
-            <label for="name" class="form-label">Image URL</label>
-            <input type="text" class="form-control" id="name"
-              name="img_url">
+            <label for="img_url" class="form-label">ภาพนักฟุตบอล</label>
+            <input type="text" class="form-control" id="img_url"
+             name="img_url">
           </div>
+
           <button type="submit" class="btn btn-outline-primary">
-            <i class="bi bi-folder-plus"></i>
+            <i class="bi bi-house-add"></i>
             Add New Player
           </button>
         </form>

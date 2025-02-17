@@ -1,79 +1,82 @@
-from flask import render_template, request, redirect, url_for
-from epl.data import teams, footballers
 from epl import app
+from flask import render_template, request, redirect, url_for
+from epl.models import teams, footballers
+
+
 
 @app.route('/')
 def index():
-  return render_template('index.html', title='Home Page')
+  return render_template('index.html',
+                         title='Home Page')
 
 @app.route('/clubs', methods=['GET', 'POST'])
 def clubs():
   if request.method == 'POST':
     club_name = request.form['club_name']
-    # print(f'{club_name}')
     club_list = []
     for team in teams:
-      # print(f'{team}')
       if club_name in team['name']:
-        # print(f'{team}')
         club_list.append(team)
-    return render_template('clubs/index.html', title='Clubs Page', teams=club_list)
-  else:
-    return render_template('clubs/index.html', title='Clubs Page', teams=teams)
+    
+    return render_template('clubs/index.html',
+                         title='Clubs Page',
+                         teams=club_list) 
 
-@app.route('/clubs/update/<int:id>', methods=['GET', 'POST'])
+  return render_template('clubs/index.html',
+                         title='Clubs Page',
+                         teams=teams)
+
+@app.route('/clubs/<int:id>/update', methods=['GET', 'POST'])
 def update_club(id):
+  team = None
   for t in teams:
-    if t['id'] == id:
+    if t['id']==id:
       team = t
       break
-  
+
   if request.method == 'POST':
-    id = request.form['id']
     name = request.form['name']
-    # print(f'{name}, {id}')
     for i in range(len(teams)):
-      # print(f'{teams[i]["name"]}, {teams[i]["id"]}')
-      if teams[i]['id'] == int(id):
-        # print(f'{i}')
+      if teams[i]['id'] == id:
         teams[i]['name'] = name
         break
-    
     return redirect(url_for('clubs'))
 
-  return render_template('clubs/update_club.html', 
-                         title='Update Club', 
+  return render_template('clubs/update_club.html',
+                         title='Update Club Page',
                          team=team)
 
-@app.route('/clubs/delete/<int:id>')
+@app.route('/clubs/<int:id>/delete')
 def delete_club(id):
-  for i in range(len(teams)): 
+  for i in range(len(teams)):
     if teams[i]['id'] == id:
       del teams[i]
       break
-
   return redirect(url_for('clubs'))
 
 @app.route('/clubs/new', methods=['GET', 'POST'])
 def new_club():
   if request.method == 'POST':
     name = request.form['name']
+
     size = len(teams)
     if size>0:
       id = teams[size-1]['id'] + 1
     else:
       id = 1
-    team = {'id':id, 'name':name}
+
+    team = {'id': id, 'name': name}
     teams.append(team)
 
     return redirect(url_for('clubs'))
-  
+
+
   return render_template('clubs/new_club.html',
-                          title='Add New Club')
+                         title='Add New Club')
 
 @app.route('/players')
 def players():
-  return render_template('players/index.html', 
+  return render_template('players/index.html',
                          title='Players Page',
                          footballers=footballers)
 
@@ -92,23 +95,31 @@ def new_player():
     else:
       id = 1
 
-    footballer = {'id':id, 'name': name, 'position':position, 'club':club, 'nationality': nationality, 'img_url': img_url}
+    footballer = {
+      'id': id, 
+      'name': name,
+      'position': position,
+      'club': club,
+      'nationality': nationality,
+      'img_url': img_url
+    }
+
     footballers.append(footballer)
-    
+
     return redirect(url_for('players'))
 
-  return render_template('players/new_player.html',
-                          title='Add New Player Page',
-                          teams=teams)
 
-@app.route('/players/details/<int:id>')
-def player_detail(id):
+  return render_template('players/new_player.html',
+                         title='Add New Player',
+                         teams=teams)
+
+@app.route('/players/<int:id>/info')
+def info_player(id):
   footballer = None
   for f in footballers:
     if f['id'] == id:
       footballer = f
       break
-  return render_template('players/player_detail.html',
-                         title='More Detail',
+  return render_template('players/info_player.html',
+                         title="Player's Information",
                          footballer=footballer)
-  

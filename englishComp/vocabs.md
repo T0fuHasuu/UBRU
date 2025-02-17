@@ -1,0 +1,157 @@
+![rat](https://media.tenor.com/Cpr_CZD-gDEAAAAj/rat-dance-viral.gif)
+# Vocabulary
+
+- Department : pnaek
+- Accounting Department : pnaek banchii
+- Audit Department : pnaek trout sob
+- Administration Department : phvaii boriharn
+- Customer Service Department : phvai borikarn lookkha
+- Finance Department : phvai karn ngern
+- Human Resource Department : phvai thrap yakam monus
+- Internationals relations Department : phvai rab yak krakvang prakthet
+- Local Payment Department : phvai 
+- Information Technology Department : pnaek technology sarn sonthet
+- Marketing Department : phvai karn tlat
+- Product development Department : phavii phanna plet phan
+- Quality Control Department : phvai khoub khun phap
+- Research and development department : phvai vijai lik phanna
+- sale Department : phvai kaii
+- Treasury Department : kam thanarath
+- Training Department : phvai phverk boom
+---
+- Employerppppppppppp : nay jangg
+- employee : lok jang 
+- recruiter nay na
+- Headhunter : headnhunter
+- staff : boklagorn
+- staff memeber : jao nathi
+- Business owner : jao khong kejkam
+- Founder : phuu kortang
+---
+- Board of Direction (BOD) : khanak kam karn borisat
+- Board Chairman : prakthankhanak kam karn
+- Chief Executeive officer : prakthan jao na thi boriharn 
+- Direction General : ahthibdeii
+- Director : Phuu am nouy karn
+- Vice Director : rong phu am nouy karn 
+- Boss : jao nai
+- Manager : phuu jat karn
+- Head of ... department : naa pnaek
+---
+- Team leader : na glum
+- Accountant : nak banchii
+- Auditor : phuu trout sob banchii
+- Assistant : phuu chouy
+- Colleague / co-worker : phern roum ngann 
+- receptionist : pnak ngan torn rab
+- intern : nak serksa phverk rab
+- mentor : thii prerksa
+- Trainer : trainer
+- Trainee : dek phverk ngan
+- Supervisor : phuu du le
+---
+- benefit : avadikarn
+- employee benefits : savadikarn pnak ngan 
+- wage : kha jang ray chur mg
+- bonus : rangvath
+- achievement bonus : bunas kvam somrej
+- commisionn : ngern "khommision"
+- health insurance : prak kan sok phap
+- life insurance : prak kan chivet
+- harzard pay : ngern piset
+- worker' compensation : kha tob ten reng ngan
+- unemployment benefit : ngern thot ten karonei vang ngan
+- annual leave : lay yut prak jam pii
+- sick leave : la bouy
+- maternity leave : karn la pher klut bot
+- parental leave : la doy pho mae
+- pension : ngern bam narn
+- promotion : karn lern tam neaeng
+- get promoted : dai rab karn lern tam naeng 
+---
+- Host : jav phap karn pdak chum
+- attendee : phuu khao roum 
+- agenda : rak baeb va rak karn prak chum
+- the minute : ray ngang karn prak chum
+- minute taker : phuu ban therk ngang kab ban sing ban yang
+- discuss  + noun : keav kab ban sing
+- discussion : karn sonrtana 
+- Have a discussion on/about + noun : keav kab ban sing
+- matter : prak ten, rerng
+- agreement : chotglong
+- move on + noun : plean rerng thi phut therng
+---
+- opinion : kvam hen
+- idea : kvam ket
+- strategy : kot yut
+- plan : phaen ka
+- plan + noun : vang phun bang yang
+- project : krong karn 
+- campaign : ronorom
+- present : karn nam sner
+- stationery : khreung khean
+- Office supplies : opkorn samnak ngan 
+- desk : tuk tham ngan
+- cubicle : tuk tham ngan kan kork
+- folder : pholder
+- Envelope : khong maii
+- mailer envelop
+- ballpoint pen
+- pencil
+- correction pen
+- highlighter
+- whiteboard marker
+- whiteboard
+- notebook
+- sticky note
+- paper clip
+- binder clip
+- stapler
+- staples
+- glue stick
+- tape
+- scissor
+- eraser
+- calculator
+- bin
+---
+- spacious : klang kvarng
+- cramped
+- modern
+- old-fashion
+- simple
+- comfortable
+- uncomfortable
+- airy  : prong
+- stuffy 
+- creative
+- friendly
+- helpful
+- supportive 
+- dynamic 
+- energetic
+- hard working
+- puntual
+- responsible
+- irresponsible
+- inactive
+- nosy
+- lazy
+- admireable 
+- respectable
+- kind
+- thoughtful
+- decisive
+- easy going
+- generoous
+- stingy
+- bossy
+- arrogant
+- rude
+- carry out a project
+- assign a task to + noun (phrase)
+- complete a task
+- meet a deadline
+- miss a deadline
+- ask for a deadline
+- have a discussion on/about + noun 

@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  {{ title }}
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>{{ title }}</h1>
+    <hr>
+
+    <!-- Search Bar and Add Player Button -->
+    <div class="row mb-3">
+      <div class="col">
+        <a href="{{ url_for('new_player') }}" class="btn btn-outline-success">
+          <i class="bi bi-person-plus-fill"></i> Add New Player
+        </a>
+      </div>
+      <div class="col">
+        <form method="post">
+          <div class="input-group mb-3">
+            <input name="player_name" type="text" class="form-control" placeholder="Player's Name" value="{{ search_term }}">
+            <button class="btn btn-outline-success" type="submit">
+              <i class="bi bi-search"></i> Search
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Players Table -->
+    <div class="card">
+      <div class="card-header text-bg-success">
+        รายชื่อนักฟุตบอล (Player List)
+      </div>
+      <div class="card-body">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>ชื่อนักฟุตบอล (Player Name)</th>
+              <th>ตำแหน่ง (Position)</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% if footballers %}
+              {% for footballer in footballers %}
+                <tr>
+                  <td>{{ loop.index }}</td>
+                  <td>{{ footballer.name }}</td>
+                  <td>{{ footballer.position }}</td>
+                  <td>
+                    <a title="More Detail" href="{{ url_for('player_detail', id=footballer.id) }}" class="btn btn-outline-success btn-sm">
+                      <i class="bi bi-card-list"></i> Details
+                    </a>
+                  </td>
+                </tr>
+              {% endfor %}
+            {% else %}
+              <tr>
+                <td colspan="4" class="text-center">No players found.</td>
+              </tr>
+            {% endif %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  {{title}}
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>{{title}}: <b class="text-secondary">{{footballer.name}}</b></h1>
+    <hr>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <img src="{{footballer.img_url}}" class="card-img-top" alt="{{footballer.img_url}}">
+          <div class="card-body">
+            <h3 class="btn btn-outline-success disabled float-end"><b class="text-success">{{footballer.name}}</b></h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h3 class="text-secondary"><b>Personal Details</b></h3>
+            <hr>
+            <div class="row">
+              <div class="col"><h3>Club</h3></div>
+              <div class="col"><h3><b class="float-end">{{footballer.club}}</b></h3></div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col"><h3>Position</h3></div>
+              <div class="col"><h3><b class="float-end">{{footballer.position}}</b></h3></div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col"><h3>Nationality</h3></div>
+              <div class="col"><h3><b class="float-end">{{footballer.nationality}}</b></h3></div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col">
+                <a href="{{url_for('players')}}" class="btn btn-outline-success">
+                <i class="bi bi-arrow-left-square-fill"></i> Back to Players Page
+                </a>
+              </div>
+              <div class="col">
+                <a href="#" class="btn btn-outline-success float-end">
+                  <i class="bi bi-person-up"></i> Update Player Info
+                </a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
