@@ -149,5 +149,3 @@ Key protocols in the Internetwork Layer:
 - **Class B (Private)**: `172.16.0.0` - `172.31.255.255`  
 - **Class C (Private)**: `192.168.0.0` - `192.168.255.255`
 
-These IP ranges are used for internal or private networks, not routable on the public internet.
-

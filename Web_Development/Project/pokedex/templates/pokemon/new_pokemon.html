@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  {{title}}
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1 class="mt-3">{{title}}</h1>
+    <hr>
+    <div class="card">
+      <div class="card-header text-bg-success">
+        <h3>Add New Pokemon</h3>
+      </div>
+      <div class="card-body">
+        <form method="post">
+          <div class="mb-3">
+            <label for="name" class="form-label">Pokemon Name</label>
+            <input name="name" type="text" class="form-control" id="name">
+          </div>
+          <div class="mb-3">
+            <label for="weight" class="form-label">Pokemon Weight</label>
+            <input name="weight" type="text" class="form-control" id="weight">
+          </div>
+          <div class="mb-3">
+            <label for="height" class="form-label">Pokemon Height</label>
+            <input name="height" type="text" class="form-control" id="height">
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Pokemon Description</label>
+            <textarea name="description" class="form-control" id="description" rows="3"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="img_url" class="form-label">Pokemon Image URL</label>
+            <input name="img_url" type="text" class="form-control" id="img_url">
+          </div>
+          <div class="mb-3">
+            <label for="pokemon_types" class="form-label">Select Pokemon Type</label>
+            <select name="pokemon_types" class="form-select" multiple>
+              {% for item in collection %}
+              <option value="{{type.id}}">type name</option>
+              {% endfor %}
+              
+              
+            </select>
+          </div>
+          <button type="submit" class="btn btn-outline-success">
+            <i class="bi bi-file-earmark-plus-fill"></i>
+            Add New Pokemon
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+
