@@ -1,0 +1,97 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  {{title}}
+{% endblock %}
+
+{% block content %}
+  <div class="container mt-3">
+    <h2>{{title}}</h2>
+    <hr>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        {% if todo %}
+        <a href="#" class="btn btn-outline-success float-end disabled">
+          New Todo
+        </a>
+        {% else %}
+        <a href="{{url_for('new_todo')}}" class="btn btn-outline-success float-end">
+          New Todo
+        </a>
+        {% endif %}
+        
+        
+      </div>
+    </div>
+    <div class="card mt-3 mb-4">
+      <div class="card-header text-center text-bg-success">
+        <h4>{{title}}'s {{current_user.username}}</h4>
+      </div>
+      <div class="card-body">
+      <form action="" method="post" novalidate>
+        {{form.hidden_tag()}}
+        <div class="input-group mb-3 mt-3">
+          {% if form.task.errors %}
+              {{form.task(class='form-control is-invalid')}}
+              {{form.submit(class='btn btn-outline-success')}}
+              <div class="invalid-feedback">
+                {% for error in form.task.errors %}
+                    <span>{{error}}</span>
+                {% endfor %}
+                
+              </div>
+          {% else %}
+              {{form.task(class='form-control')}}
+              {{form.submit(class='btn btn-outline-success')}}
+          {% endif %}
+          
+        </div>
+      </form>
+      <div class="table-responsive mt-4">
+        <table class="table table-hover">
+         
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Task</th>
+              <th>Action</th>
+            </tr>
+            
+          </thead>
+          <tbody>
+            {% if tasks %}
+                {% for task in tasks %}
+                <tr>
+                  <td>{{loop.index}}</td>
+                  <td>{{task.task}}</td>
+                  <td>
+                    {% if task.completed %}
+                    <a  class="btn btn-outline-success btn-sm disabled" title="task completed">
+                      <i class="bi bi-clipboard-check-fill"></i>
+                    </a>
+                    {% else %}
+                    <a href="{{url_for('task_completed', id=task.id)}}" class="btn btn-outline-primary btn-sm" title="uncomplete task">
+                      <i class="bi bi-clipboard-check"></i>
+                    </a>
+                    {% endif %}
+                    
+                    
+                  </td>
+                </tr>
+                {% endfor %}
+                
+            {% else %}
+                <tr>
+                  <td colspan="3" class="text-center text-danger">No Task!</td>
+                </tr>
+            {% endif %}
+            
+            
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

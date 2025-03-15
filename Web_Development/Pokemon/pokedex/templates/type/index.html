@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  {{title}}
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1 class="mt-3">{{title}}</h1>
+    <hr>
+    <div class="row">
+      <div class="col">
+        <a href="{{url_for('new_type')}}" class="btn btn-outline-success">
+          <i class="bi bi-code-square"></i>
+          New Pokemon Type
+        </a>
+      </div>
+      <div class="col">
+        <form method="post">
+          <div class="input-group mb-3">
+            <input name="type_name" type="text" class="form-control" placeholder="Pokemon Type's Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-success" type="submit" id="button-addon2">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header text-bg-success">
+        <h3 >List of Pokemon Type</h3>
+      </div>
+      <div class="card-body">
+        <table class="table table-hover">
+          <thead>
+            <th>No.</th>
+            <th>Type Name</th>
+            <th>Action</th>
+          </thead>
+          <tbody>
+            {% for type in types %}
+            <tr>
+              <td>{{loop.index}}</td>
+              <td>{{type.name}}</td>
+              <td>
+                <a href="{{url_for('update_type', id=type.id)}}" title="Update Pokemon Type" class="btn btn-outline-success btn-sm">
+                  <i class="bi bi-check2-all"></i>
+                </a>
+              </td>
+            </tr>
+            {% endfor %}
+            
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+  </div>
+{% endblock %}
+
+

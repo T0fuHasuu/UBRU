@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg bg-success" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{url_for('home')}}">Todo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{url_for('home')}}">Home</a>
+        </li>
+        {% if current_user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('todo_today')}}">Todo's Today</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('account')}}">Account</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Tasks History
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{{url_for('all_todos')}}">Show All Tasks</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{{url_for('completed_todos')}}">Show Completed Tasks</a></li>
+            <li><a class="dropdown-item" href="{{url_for('uncompleted_todos')}}">Show Uncompleted Tasks</a></li>
+          </ul>
+        </li>
+        {% endif %}
+        
+        
+      </ul>
+
+      <ul class="navbar-nav">
+        {% if current_user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link">
+              <img src="{{url_for('static', filename='img/'+ current_user.avatar)}}" width="25" height="25" alt="">
+              Welcome, {{current_user.username}}</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{url_for('logout')}}" class="nav-link">Logout</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a href="{{url_for('register')}}" class="nav-link">Register</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{url_for('login')}}" class="nav-link">Login</a>
+          </li>
+        {% endif %}
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>

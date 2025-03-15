@@ -1,0 +1,76 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  {{title}}
+{% endblock %}
+
+{% block content %}
+  <div class="container mt-3">
+    <h2>{{title}}</h2>
+    <hr>
+    <div class="card">
+      <div class="card-header text-bg-success text-center">
+        <h4>{{title}}</h4>
+      </div>
+      <div class="card-body">
+        <img width="10%" src="{{url_for('static', filename='img/' + avatar_pic)}}">
+        <hr>
+        <form action="" method="post" novalidate class="row g-3" 
+        enctype="multipart/form-data">
+          {{form.hidden_tag()}}
+          <div class="col-md-6">
+            {{form.username.label(class='form-label')}}
+            {% if form.username.errors %}
+            {{form.username(class='form-control is-invalid')}}
+            <div class="invalid-feedback">
+              {% for error in form.username.errors %}
+                  <span>{{error}}</span>
+              {% endfor %}
+              
+            </div>
+            {% else %}
+            {{form.username(class='form-control')}}
+            {% endif %}
+            
+            
+          </div>
+          <div class="col-md-6">
+            {{form.email.label(class='form-label')}}
+            {% if form.email.errors %}
+            {{form.email(class='form-control is-invalid')}}
+            <div class="invalid-feedback">
+              {% for error in form.email.errors %}
+                  <span>{{error}}</span>
+              {% endfor %}
+              
+            </div>
+            {% else %}
+            {{form.email(class='form-control')}}
+            {% endif %}
+            
+            
+          </div>
+          <div class="col-md-12">
+            {{form.fullname.label(class='form-label')}}
+            {{form.fullname(class='form-control')}}
+          </div>
+          
+          <div class="col-md-12">
+            {{form.avatar.label(class='form-label')}}
+            {{form.avatar(class='form-control')}}
+            {% if form.avatar.errors %}
+              {% for error in form.avatar.errors %}
+              <span class="text-danger">{{error}}</span><br>
+              {% endfor %}
+            {% endif %}
+            
+          </div>
+          <div class="border-top border-success border-1 mb-4 mt-4"></div>
+          <div class="col-12 text-center">
+            {{form.submit(class='btn btn-outline-success')}}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

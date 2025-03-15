@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  {{title}}
+{% endblock %}
+
+{% block content %}
+  <div class="container mt-3">
+    <h3>{{title}}</h3>
+    <hr>
+    <div class="card">
+      <div class="card-header text-light bg-success text-center">
+        <h4>{{title}}</h4>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Tasks</th>
+                <th>Created Date</th>
+                <th class="text-center">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <h4>Number of Tasks: {{tasks|length}}</h4>
+              {% for task in tasks %}
+                <tr>
+                  <td>{{loop.index}}</td>
+                  <td>{{task.task}}</td>
+                  <td>{{task.todo.created_at}}</td>
+                  <td class="text-center">
+                    {% if task.completed %}
+                      <span class="text-success">completed</span>
+                    {% else %}
+                    <span class="text-danger">uncomplete</span>
+                    {% endif %}
+                    
+                  </td>
+                </tr>
+              {% endfor %}
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
