@@ -1,0 +1,14 @@
+package core;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		// For each is use to call out every item in the array
+		String[] animals = {"cat", "Dog", "Rat", "Bird"};
+		
+		for(String i : animals) {
+			System.out.println(i);
+		}
+		
+	}
+}

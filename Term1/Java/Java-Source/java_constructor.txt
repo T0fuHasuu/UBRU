@@ -1,0 +1,43 @@
+# Main.java
+
+package core;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		wife waifu = new wife("Ei", 100, 70);
+		wife waifu1 = new wife("Miko", 2000, 65);
+		
+		System.out.println(waifu.name);
+		System.out.println(waifu1.name);
+		
+		waifu.eat();
+		waifu1.drink();
+	}
+}
+
+
+
+# wife.java
+
+package core;
+
+public class wife{
+	
+	String name;
+	int age;
+	double weight;
+	
+	wife (String name, int age, double weight){
+		this.name = name;
+		this.age = age;
+		this.weight = weight;
+	}
+	void eat() {
+		System.out.println(this.name + " is eating ");
+	}
+	void drink() {
+		System.out.println(this.name + " is drinking ");
+	}
+}

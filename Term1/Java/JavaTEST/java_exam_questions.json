@@ -1,0 +1,244 @@
+{
+  "questions": [
+    {
+      "question": "What is the correct signature for the main method in Java?",
+      "correct_answer": "public static void main(String[] args)",
+      "choices": [
+        "public static void main(String[] args)",
+        "public void main(String args[])",
+        "public static main(String args[])",
+        "void main(String[] args)"
+      ]
+    },
+    {
+      "question": "Which data type should be used to store text in Java?",
+      "correct_answer": "String",
+      "choices": [
+        "String",
+        "Text",
+        "varchar",
+        "char[]"
+      ]
+    },
+    {
+      "question": "What primitive data type in Java is commonly used to store decimal numbers?",
+      "correct_answer": "double",
+      "choices": [
+        "double",
+        "float",
+        "decimal",
+        "real"
+      ]
+    },
+    {
+      "question": "Which operator is used to compare two values for equality in Java?",
+      "correct_answer": "==",
+      "choices": [
+        "==",
+        "=",
+        "equals",
+        "==="
+      ]
+    },
+    {
+      "question": "Which keyword is used to declare a constant in Java?",
+      "correct_answer": "final",
+      "choices": [
+        "final",
+        "const",
+        "static",
+        "constant"
+      ]
+    },
+    {
+      "question": "What statement is used to exit a loop prematurely in Java?",
+      "correct_answer": "break",
+      "choices": [
+        "break",
+        "continue",
+        "exit",
+        "stop"
+      ]
+    },
+    {
+      "question": "How do you find the length of a String in Java?",
+      "correct_answer": ".length()",
+      "choices": [
+        ".length()",
+        ".size()",
+        ".count()",
+        ".getLength()"
+      ]
+    },
+    {
+      "question": "Which method is used to convert a String to an int in Java?",
+      "correct_answer": "Integer.parseInt()",
+      "choices": [
+        "Integer.parseInt()",
+        "String.toInt()",
+        "parseInt()",
+        "convertToInt()"
+      ]
+    },
+    {
+      "question": "What is the logical AND operator in Java?",
+      "correct_answer": "&&",
+      "choices": [
+        "&&",
+        "&",
+        "and",
+        "||"
+      ]
+    },
+    {
+      "question": "How do you get the length of an array named 'arr' in Java?",
+      "correct_answer": "arr.length",
+      "choices": [
+        "arr.length",
+        "arr.size()",
+        "arr.count",
+        "arr.getLength()"
+      ]
+    },
+    {
+      "question": "What is it called when a class has multiple methods with the same name but different parameters?",
+      "correct_answer": "Method overloading",
+      "choices": [
+        "Method overloading",
+        "Method overriding",
+        "Constructor chaining",
+        "Polymorphism"
+      ]
+    },
+    {
+      "question": "Which keyword is used to specify the value a method should return?",
+      "correct_answer": "return",
+      "choices": [
+        "return",
+        "yield",
+        "result",
+        "output"
+      ]
+    },
+    {
+      "question": "What keyword allows a method to be called without creating an instance of the class?",
+      "correct_answer": "static",
+      "choices": [
+        "static",
+        "abstract",
+        "final",
+        "void"
+      ]
+    },
+    {
+      "question": "How does a recursive method typically work?",
+      "correct_answer": "It's called recursively until a base case is reached",
+      "choices": [
+        "It's called recursively until a base case is reached",
+        "It calls other methods until completion",
+        "It processes in an infinite loop",
+        "It returns null until all cases are resolved"
+      ]
+    },
+    {
+      "question": "List the four access modifiers in Java from most to least restrictive.",
+      "correct_answer": "public, protected, default (package-private), private",
+      "choices": [
+        "public, protected, default (package-private), private",
+        "private, default (package-private), protected, public",
+        "public, private, default (package-private), protected",
+        "default (package-private), public, protected, private"
+      ]
+    },
+    {
+      "question": "In object-oriented programming, what is a class?",
+      "correct_answer": "A blueprint for creating objects",
+      "choices": [
+        "A blueprint for creating objects",
+        "A function that groups variables and methods",
+        "An instance of an object",
+        "A block of reusable code"
+      ]
+    },
+    {
+      "question": "Which keyword is used to create an instance of a class?",
+      "correct_answer": "new",
+      "choices": [
+        "new",
+        "create",
+        "instantiate",
+        "construct"
+      ]
+    },
+    {
+      "question": "What method call is used to invoke a superclass constructor?",
+      "correct_answer": "super()",
+      "choices": [
+        "super()",
+        "this()",
+        "parent()",
+        "init()"
+      ]
+    },
+    {
+      "question": "What is the main purpose of encapsulation in Java?",
+      "correct_answer": "To hide the internal details of how an object functions",
+      "choices": [
+        "To hide the internal details of how an object functions",
+        "To prevent unauthorized access to methods",
+        "To allow inheritance from a superclass",
+        "To create abstract methods"
+      ]
+    },
+    {
+      "question": "Which keyword is used to define a subclass in Java?",
+      "correct_answer": "extends",
+      "choices": [
+        "extends",
+        "implements",
+        "inherits",
+        "subclass"
+      ]
+    },
+    {
+      "question": "What is the principle of polymorphism in Java?",
+      "correct_answer": "An object can be treated as an instance of its superclass",
+      "choices": [
+        "An object can be treated as an instance of its superclass",
+        "An object can be cloned into multiple instances",
+        "A class can have multiple constructors",
+        "A class can inherit multiple superclasses"
+      ]
+    },
+    {
+      "question": "Which access modifier should be used for encapsulating class attributes?",
+      "correct_answer": "private",
+      "choices": [
+        "private",
+        "public",
+        "protected",
+        "default"
+      ]
+    },
+    {
+      "question": "What is the purpose of inner classes in Java?",
+      "correct_answer": "To define a class within another class",
+      "choices": [
+        "To define a class within another class",
+        "To reduce memory usage",
+        "To speed up the JVM",
+        "To increase code readability"
+      ]
+    },
+    {
+      "question": "Which keyword is used to declare a method that has no body?",
+      "correct_answer": "abstract",
+      "choices": [
+        "abstract",
+        "void",
+        "final",
+        "private"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+# Main.java
+
+package core;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		wife garage = new wife();
+		
+		second car = new second("BMW");
+		second car1 = new second("Tesla");
+		
+		garage.park(car);
+		garage.park(car1);
+		
+	}
+}
+
+
+# wife.java
+package core;
+
+
+public class wife{
+	
+	void park(second car) {
+		System.out.println("The " + car.name + " is park in the garage.");
+		
+	}
+	
+	
+}
+
+# second.java
+
+package core;
+
+public class second {
+
+	String name;
+	
+	second (String name){
+		this.name = name;
+	}
+	
+}

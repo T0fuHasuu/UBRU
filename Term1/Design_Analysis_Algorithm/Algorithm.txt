@@ -1,0 +1,32 @@
+Here’s the translated list without the dates:
+
+---
+
+1. Exam Practice Exercises
+2. Traffic Light Problem Exercise
+3. Dynamic Programming
+4. AI-Coding Assessment
+5. AI-Coding
+6. Finding the Shortest Path in Document, Question 2
+7. Greedy Algorithm
+8. Simple Data Encoding
+9. Algorithm Visualizer
+10. Recursion
+11. Big-O Notations
+12. Trace Table: Bubble Sort Data Sorting
+13. Trace Table: Sum of Numbers Between 1 - 100
+14. Trace Table: Error Checking Table
+15. Grade Algorithm
+16. Grade Calculation Program Pseudo Code
+17. Pseudo Code or Mock Code
+18. Bus Ticket Selling Program
+19. Example: Thai Commenting Style (Kotlin)
+20. Writing Thai Algorithms
+21. Flowchart Symbols
+22. Chapter 0: What is an Algorithm?
+23. Student List
+24. Course Description 
+
+---
+
+Let me know if there’s anything more you’d like to do with this list!

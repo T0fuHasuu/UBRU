@@ -1,0 +1,12 @@
+Sammury of the Day
+Everything Should be taking into thinking with logically and crucially
+When producing a procedure with best effecientcy
+you should take these into thinking:
+_ The Problems of it which slowed it down or worsen it up
+_ What are the goals of your result
+_ Everything must be in logically and reasonable
+_ There's no weaken spots or overuse steps
+_ Produce it with the most simple procedure 
+
+The purpose of this is to make things more easier for our daily life, such as computer, ATM, etc...
+So simplify the procedure is what make this special on top of being effitient.

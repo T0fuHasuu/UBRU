@@ -1,0 +1,122 @@
+ 1. Exam Practice Exercises
+   - Review past exam-style questions and understand the format.
+   - Focus on problem-solving techniques and time management.
+   - Identify common patterns in questions to anticipate similar ones on the exam.
+
+ 2. Traffic Light Problem Exercise
+   - Understand how to apply algorithms to real-world problems, like traffic systems.
+   - Study problem decomposition: breaking down complex problems into simpler parts.
+   - Key concepts: state machines, timing cycles, and signal synchronization.
+
+ 3. Dynamic Programming
+   - Learn the principles of overlapping subproblems and optimal substructure.
+   - Study examples like the Fibonacci sequence, knapsack problem, and shortest path.
+   - Understand memoization and tabulation as techniques to store intermediate results.
+
+ 4. AI-Coding Assessment
+   - Familiarize yourself with AI-related coding challenges, focusing on algorithms commonly used in AI (like search algorithms).
+   - Practice coding skills in an AI context, including decision trees, neural networks, or genetic algorithms.
+   - Understand the logic behind the coding assessment format (if known).
+
+ 5. AI-Coding
+   - Focus on basic AI concepts such as machine learning algorithms, supervised and unsupervised learning, and reinforcement learning.
+   - Understand common AI algorithms, including K-nearest neighbors, decision trees, and support vector machines.
+   - Key principles: data preprocessing, model training, and evaluation metrics (accuracy, precision, recall).
+
+ 6. Finding the Shortest Path (Document Question 2)
+   - Study pathfinding algorithms such as Dijkstra’s Algorithm, Bellman-Ford, and A*.
+   - Understand graph representations (adjacency lists, adjacency matrices).
+   - Learn about practical applications of shortest path algorithms, e.g., GPS and network routing.
+
+ 7. Greedy Algorithm
+   - Understand the concept of “local optimum leads to global optimum.”
+   - Study problems solved by greedy algorithms like coin change, activity selection, and Huffman coding.
+   - Know when greedy algorithms are applicable and when they may fail.
+
+ 8. Simple Data Encoding
+   - Learn about basic encoding techniques like ASCII, binary, and hexadecimal.
+   - Understand the importance of data encoding in computer systems.
+   - Study simple encoding and decoding algorithms, including run-length encoding and character encoding.
+
+ 9. Algorithm Visualizer
+   - Familiarize yourself with tools that visualize algorithms in action.
+   - Understand the benefit of visualization in learning complex algorithms.
+   - Practice using visualizer tools to gain insights into how algorithms process data step-by-step.
+
+ 10. Recursion
+   - Grasp the concept of recursive functions and base cases.
+   - Study common recursive problems such as factorial, Fibonacci, and binary search.
+   - Understand the stack mechanism in recursion and how it can lead to stack overflow if not properly managed.
+
+ 11. Big-O Notations
+   - Master the concept of Big-O notation to analyze algorithm efficiency.
+   - Understand common time complexities: O(1), O(log n), O(n), O(n log n), O(n²).
+   - Practice calculating Big-O for different algorithms and identify their efficiency in practice.
+
+ 12. Trace Table: Bubble Sort Data Sorting
+   - Study how Bubble Sort works and its step-by-step execution.
+   - Use a trace table to understand sorting passes and how elements are compared and swapped.
+   - Know the time complexity of Bubble Sort (O(n²)) and where it might be applicable.
+
+ 13. Trace Table: Sum of Numbers Between 1 - 100
+   - Learn how trace tables work for calculating cumulative sums.
+   - Practice breaking down each step in a loop and updating a running total.
+   - Understand formulas for sums (like arithmetic progression) as an alternative to looping.
+
+ 14. Trace Table: Error Checking Table
+   - Understand how trace tables can be used to debug and verify algorithm correctness.
+   - Practice setting up trace tables to monitor variable changes and ensure code accuracy.
+   - Review techniques for identifying logical errors using trace tables.
+
+ 15. Grade Algorithm
+   - Study how to implement a grading algorithm that categorizes scores into grades.
+   - Understand conditionals in coding to assign grades based on score ranges.
+   - Know how grading curves work and the concept of conditional statements for decision-making.
+
+ 16. Grade Calculation Program Pseudo Code
+   - Write and interpret pseudocode for grading logic.
+   - Focus on flow control: using `if`, `else`, and `elif` statements in grading conditions.
+   - Understand how to translate problem requirements into pseudocode.
+
+ 17. Pseudo Code or Mock Code
+   - Learn the conventions of writing pseudocode (simple, language-independent code).
+   - Practice writing pseudocode for common algorithms (sorting, searching).
+   - Understand the purpose of pseudocode: to plan algorithms clearly before actual coding.
+
+ 18. Bus Ticket Selling Program
+   - Familiarize yourself with basic ticketing system algorithms, focusing on user input and output.
+   - Understand how to handle cases for seat availability and ticket pricing.
+   - Practice using conditionals and loops for user interactions and validations.
+
+ 19. Example: Thai Commenting Style (Kotlin)
+   - Study the syntax for commenting in Kotlin.
+   - Review best practices for writing comments: clarity, conciseness, and relevance.
+   - Practice writing clear comments in code to enhance readability.
+
+ 20. Writing Thai Algorithms
+   - Learn how to write and explain algorithms in Thai.
+   - Practice writing algorithmic steps clearly, especially if required to explain your code in Thai.
+   - Focus on vocabulary and language structure for explaining technical terms.
+
+ 21. Flowchart Symbols
+   - Familiarize yourself with standard flowchart symbols: start/end, process, decision, input/output, and arrows.
+   - Understand how to map an algorithm to a flowchart.
+   - Practice creating flowcharts for basic algorithms to visualize their logic.
+
+ 22. Chapter 0: What is an Algorithm?
+   - Understand the definition and purpose of an algorithm.
+   - Review examples of algorithms in daily life and computing (e.g., cooking recipes, search algorithms).
+   - Focus on properties of algorithms: clarity, efficiency, and definitiveness.
+
+ 23. Student List
+   - This might just be a document listing students, but if relevant, understand how to process, sort, or filter lists.
+   - Practice algorithms for handling lists if applicable, like searching or sorting a list of names.
+
+ 24. Course Description
+   - Review the objectives and key concepts covered in the course.
+   - Use this to understand the scope of the exam and topics that may have been emphasized.
+   - Focus on understanding how each topic relates to the course goals.
+
+---
+
+This should give you a solid foundation for each topic and help you focus on crucial concepts and skills. Let me know if you need more details on any specific topic!

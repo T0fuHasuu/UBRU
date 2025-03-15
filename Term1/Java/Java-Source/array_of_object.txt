@@ -1,0 +1,46 @@
+# Main.java
+
+package core;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		
+//		int[] numbers = new int[3];
+//		char[] characters = new char[4];
+//		String[] strings = new String[5];
+		
+		wife[] waifu = new wife[3];
+		
+		wife w1 = new wife("Ei");
+		wife w2 = new wife("Miko");
+		wife w3 = new wife("Sara");
+		
+		waifu[0] = w1;
+		waifu[1] = w2;
+		waifu[2] = w3;
+		
+		System.out.println(waifu[0].name);
+		System.out.println(waifu[1].name);
+		System.out.println(waifu[2].name);
+		
+		
+	}
+}
+
+# wife.java
+
+package core;
+
+
+public class wife{
+	
+	String name;
+	
+	wife(String name){
+		this.name = name;
+	}
+	
+	
+}

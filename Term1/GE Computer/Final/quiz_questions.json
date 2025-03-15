@@ -1,0 +1,312 @@
+[
+    {
+        "question": "What is digital literacy?",
+        "options": [
+            "a) Ability to read digital books",
+            "b) Ability to find, evaluate, create, and communicate information using digital technologies",
+            "c) Knowledge of computer hardware",
+            "d) Skill in using social media"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Which of the following is part of the 3R concept?",
+        "options": [
+            "a) Read",
+            "b) Relax",
+            "c) Reduce",
+            "d) Recycle"
+        ],
+        "answer": "d"
+    },
+    {
+        "question": "The 4C skills include all of the following EXCEPT:",
+        "options": [
+            "a) Critical thinking",
+            "b) Collaboration",
+            "c) Creativity",
+            "d) Calculation"
+        ],
+        "answer": "d"
+    },
+    {
+        "question": "Digital media includes:",
+        "options": [
+            "a) Only text documents",
+            "b) Only video files",
+            "c) Text, images, videos, and audio",
+            "d) Only audio files"
+        ],
+        "answer": "c"
+    },
+    {
+        "question": "What are the key elements of communication?",
+        "options": [
+            "a) Sender, message, medium, receiver",
+            "b) Message, device, feedback, context",
+            "c) Sender, device, platform, message",
+            "d) Feedback, context, message, sender"
+        ],
+        "answer": "a"
+    },
+    {
+        "question": "Which of the following is an example of one-way communication?",
+        "options": [
+            "a) Video conferencing",
+            "b) Emailing a newsletter",
+            "c) Phone call",
+            "d) Group chat"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Effective searching on Google involves:",
+        "options": [
+            "a) Randomly clicking on links",
+            "b) Using specific keywords and filters",
+            "c) Only searching in the image section",
+            "d) Ignoring the source credibility"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Personal data is defined as:",
+        "options": [
+            "a) Any information that can identify an individual",
+            "b) Only financial information",
+            "c) Only information shared on social media",
+            "d) Publicly available information"
+        ],
+        "answer": "a"
+    },
+    {
+        "question": "Which of the following is a right individuals have online?",
+        "options": [
+            "a) Right to spam others",
+            "b) Right to privacy",
+            "c) Right to copy any content",
+            "d) Right to fake identities"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Copyright protects:",
+        "options": [
+            "a) Only music",
+            "b) Original works of authorship",
+            "c) Public domain works",
+            "d) None of the above"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Creative Commons licenses allow creators to:",
+        "options": [
+            "a) Completely give up their rights",
+            "b) Share their work while maintaining some rights",
+            "c) Sell their work for any price",
+            "d) Prevent others from using their work"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "The Personal Data Protection Act regulates:",
+        "options": [
+            "a) Only financial transactions",
+            "b) The processing of personal data",
+            "c) How to use social media",
+            "d) None of the above"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Computer Crime Act deals with:",
+        "options": [
+            "a) General theft",
+            "b) Crimes committed through computers",
+            "c) Traffic violations",
+            "d) None of the above"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "A digital footprint is:",
+        "options": [
+            "a) A physical trace left by a user",
+            "b) The data individuals leave online",
+            "c) Only the social media content",
+            "d) None of the above"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "A passive digital footprint is created by:",
+        "options": [
+            "a) User inputs",
+            "b) Cookies and tracking technologies",
+            "c) Social media posts",
+            "d) Active online participation"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Sensitive personal data includes:",
+        "options": [
+            "a) Favorite color",
+            "b) Health records",
+            "c) Social media usernames",
+            "d) Hobbies"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Common health issues from excessive computer use include:",
+        "options": [
+            "a) Eye strain",
+            "b) Improved eyesight",
+            "c) Weight loss",
+            "d) Increased social skills"
+        ],
+        "answer": "a"
+    },
+    {
+        "question": "Digital commerce is best defined as:",
+        "options": [
+            "a) Buying and selling goods in physical stores",
+            "b) Online buying and selling of goods and services",
+            "c) Trading stocks online",
+            "d) All of the above"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "What is an example of two-way communication?",
+        "options": [
+            "a) Television broadcast",
+            "b) Podcast",
+            "c) Video call",
+            "d) Newspaper"
+        ],
+        "answer": "c"
+    },
+    {
+        "question": "Searching effectively on Google includes using:",
+        "options": [
+            "a) Specific keywords and Boolean operators",
+            "b) Only one keyword",
+            "c) No filters",
+            "d) Random phrases"
+        ],
+        "answer": "a"
+    },
+    {
+        "question": "The right to freedom of expression allows individuals to:",
+        "options": [
+            "a) Spread false information",
+            "b) Share their opinions without fear of censorship",
+            "c) Harass others online",
+            "d) Steal content"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Which of the following is NOT a copyright infringement?",
+        "options": [
+            "a) Using a song in a video without permission",
+            "b) Quoting a book in a research paper with proper citation",
+            "c) Copying and distributing software without a license",
+            "d) Sharing a copyrighted image without credit"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Creative Commons licenses can include:",
+        "options": [
+            "a) Attribution",
+            "b) Non-commercial use",
+            "c) Share alike",
+            "d) All of the above"
+        ],
+        "answer": "d"
+    },
+    {
+        "question": "Which of the following protects personal data?",
+        "options": [
+            "a) Computer Crime Act",
+            "b) Personal Data Protection Act",
+            "c) Copyright Act",
+            "d) None of the above"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Which of the following is a digital crime?",
+        "options": [
+            "a) Vandalism",
+            "b) Hacking",
+            "c) Shoplifting",
+            "d) Tax evasion"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Your digital footprint can be affected by:",
+        "options": [
+            "a) Social media activity",
+            "b) Online purchases",
+            "c) Search history",
+            "d) All of the above"
+        ],
+        "answer": "d"
+    },
+    {
+        "question": "How can you minimize your digital footprint?",
+        "options": [
+            "a) Avoid using the internet",
+            "b) Regularly delete browsing history and accounts",
+            "c) Use multiple accounts for everything",
+            "d) None of the above"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Which of the following is an example of sensitive personal data?",
+        "options": [
+            "a) Your name",
+            "b) Your birthdate",
+            "c) Your medical history",
+            "d) Your favorite movie"
+        ],
+        "answer": "c"
+    },
+    {
+        "question": "Overuse of computers can lead to:",
+        "options": [
+            "a) Increased focus",
+            "b) Better physical health",
+            "c) Eye strain and fatigue",
+            "d) Improved sleep"
+        ],
+        "answer": "c"
+    },
+    {
+        "question": "Digital commerce includes:",
+        "options": [
+            "a) Only large corporations",
+            "b) Any online transaction",
+            "c) Only physical goods sold online",
+            "d) Only digital products"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Which of the following is a best practice for online shopping?",
+        "options": [
+            "a) Sharing passwords with friends",
+            "b) Using secure payment methods",
+            "c) Ignoring privacy policies",
+            "d) Using public Wi-Fi for purchases"
+        ],
+        "answer": "b"
+    }
+]

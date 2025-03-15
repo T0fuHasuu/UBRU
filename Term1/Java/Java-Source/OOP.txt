@@ -1,0 +1,45 @@
+# Main.java
+
+package core;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		// object = an instance of class that may contain attributes and methods
+		// example : (phone, desk, computer, coffee cup)
+		
+		wife waifu1 = new wife();
+		wife waifu2 = new wife();
+		
+		System.out.println(waifu1.type);
+		System.out.println(waifu1.charisma);
+		System.out.println();
+		System.out.println(waifu2.type);
+		System.out.println(waifu2.charisma);
+		
+//		waifu1.take();
+//		waifu1.another();
+	}
+}
+
+
+# wife.java
+
+package core;
+
+public class wife {
+	String type = "Onee-san";
+	char size = 'G';
+	int age = 25;
+	String personal = "Comfy";
+	double charisma = 4000.00;
+	
+	void take() {
+		System.out.println("This is your wife");
+	}
+	void another() {
+		System.out.println("You have choosen another wife");
+	}
+	
+}

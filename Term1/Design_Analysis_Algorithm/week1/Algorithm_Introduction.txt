@@ -1,0 +1,15 @@
+This is a comprehensive overview of algorithms, from their basic definition to the key qualities of a well-designed algorithm. It also touches on the process of designing and analyzing algorithms.
+
+@ Algorithm are steps which are needed to be follow to get the desired result.
+
+_ These step can be execute via computer and algorithm is what live with us everyday as process of doing things.
+
+@ What is the best quality of algorithm? It consist of :
+
+_ Clarity : steps should be clear and unambiguous
+_ Sequence : steps should be sort and execute in order and logically.
+_ Correctness : algorithm should produce output whenever valid input is entered.
+_ Efficiency : The algorithm should use resources (time and space) efficiently.
+_ Termination : 
+
+

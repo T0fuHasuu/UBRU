@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light Simulation with Roundabout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #intersection {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: #333;
+            margin-bottom: 20px;
+        }
+        .road {
+            position: absolute;
+            background-color: #666;
+        }
+        .road.horizontal {
+            width: 100%;
+            height: 80px;
+            top: 160px;
+        }
+        .road.vertical {
+            width: 80px;
+            height: 50%;
+            left: 160px;
+        }
+        .roundabout {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #666;
+            top: 140px;
+            left: 140px;
+        }
+        .traffic-light {
+            width: 30px;
+            height: 90px;
+            background-color: #222;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 5px;
+            position: absolute;
+        }
+        .light {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+        .red { background-color: #ff0000; }
+        .yellow { background-color: #ffff00; }
+        .green { background-color: #00ff00; }
+        .active { opacity: 1; }
+        .timer {
+            position: absolute;
+            color: white;
+            font-size: 12px;
+            top: 100%;
+        }
+        #map-container {
+            width: 80vw;
+            height: 50vh;
+            overflow: hidden;
+            position: relative;
+        }
+        #trafficMap {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        #zoomControls {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Traffic light system with a roundabout -->
+    <div id="intersection">
+        <div class="road horizontal"></div>
+        <div class="road vertical"></div>
+        <div class="roundabout"></div>
+
+        <!-- Traffic lights for 3 directions -->
+        <div class="traffic-light" style="top: 65px; left: 170px;">
+            <div class="light red"></div>
+            <div class="light yellow"></div>
+            <div class="light green"></div>
+            <div class="timer">70</div>
+        </div>
+        <div class="traffic-light" style="top: 170px; left: 65px;">
+            <div class="light red"></div>
+            <div class="light yellow"></div>
+            <div class="light green"></div>
+            <div class="timer">70</div>
+        </div>
+        <div class="traffic-light" style="top: 250px; right: 85px;">
+            <div class="light red"></div>
+            <div class="light yellow"></div>
+            <div class="light green"></div>
+            <div class="timer">70</div>
+        </div>
+    </div>
+
+    <!-- Map with zoomable functionality -->
+    <div id="map-container">
+        <img src="18-กันยายน-ฝั่งเมือง-1-scaled.jpg" alt="Traffic Map" id="trafficMap">
+    </div>
+
+    <div id="zoomControls">
+        <button onclick="zoom(1.1)">Zoom In</button>
+        <button onclick="zoom(0.9)">Zoom Out</button>
+    </div>
+
+    <script>
+        const trafficLights = document.querySelectorAll('.traffic-light');
+        let currentPhase = 0;
+        const phases = [
+            { duration: 70, light: 'red' },
+            { duration: 5, light: 'yellow' },
+            { duration: 50, light: 'green' },
+        ];
+
+        function updateLights() {
+            trafficLights.forEach((light, index) => {
+                const phase = (currentPhase + index) % phases.length;
+                const currentLight = phases[phase].light;
+                light.querySelector(`.${currentLight}`).classList.add('active');
+                light.querySelector('.timer').textContent = phases[phase].duration;
+            });
+        }
+
+        function countdown() {
+            trafficLights.forEach((light, index) => {
+                const timer = light.querySelector('.timer');
+                let time = parseInt(timer.textContent);
+                if (time > 0) {
+                    timer.textContent = time - 1;
+                } else {
+                    const phase = (currentPhase + index) % phases.length;
+                    const nextPhase = (phase + 1) % phases.length;
+                    light.querySelector(`.${phases[phase].light}`).classList.remove('active');
+                    light.querySelector(`.${phases[nextPhase].light}`).classList.add('active');
+                    timer.textContent = phases[nextPhase].duration;
+                }
+            });
+
+            if (parseInt(trafficLights[0].querySelector('.timer').textContent) === 0) {
+                currentPhase = (currentPhase + 1) % phases.length;
+            }
+        }
+
+        function zoom(factor) {
+            const map = document.getElementById('trafficMap');
+            const currentScale = map.style.transform ? parseFloat(map.style.transform.split('(')[1]) : 1;
+            const newScale = currentScale * factor;
+            map.style.transform = `scale(${newScale})`;
+        }
+
+        updateLights();
+        setInterval(countdown, 1000);
+    </script>
+</body>
+</html>

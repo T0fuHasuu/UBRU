@@ -1,0 +1,43 @@
+# Main
+
+package core;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		// abstract cannot be instantiated but can have subclass
+		// the methods of it declared without implementation
+//		Vehicle vehicle = new Vehicle(); this can not be use since the class or mother got abstract
+		Car car = new Car();
+		car.go();
+		}
+}
+
+# Car
+
+package core;
+
+public class Car extends Vehicle{
+	
+	void go() {
+		System.out.println("It is crazy");
+	}
+	
+}
+
+
+
+# Vehicle
+
+package core;
+
+public abstract class Vehicle {
+	
+	abstract void go();
+	
+}
+
+
+
+// main purpose is used as another layer of security of things that shouldnt be instantiat.

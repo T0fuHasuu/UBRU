@@ -1,0 +1,57 @@
+# Main.java
+
+package core;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		wife love = new wife("Onee-san","Chilling","Dango","Sweet");
+		
+		System.out.println("This is my type: ");
+		System.out.println(love.type);
+		System.out.println(love.vibe);
+		System.out.println(love.favo);
+		System.out.println(love.scent);
+		
+	}
+}
+
+
+
+# wife.java
+package core;
+
+
+public class wife{
+	
+	String type;
+	String vibe;
+	String favo;
+	String scent;
+	
+	wife(String type, String vibe, String favo, String scent){
+		this.type = type;
+		this.vibe = vibe;
+		this.favo = favo;
+		this.scent = scent;
+	}
+	wife(String type, String vibe, String favo){
+		this.type = type;
+		this.vibe = vibe;
+		this.favo = favo;
+	}
+	wife(String type, String vibe){
+		this.type = type;
+		this.vibe = vibe;
+	}
+	wife(String type){
+		this.type = type;
+		
+	}
+	
+	
+}
+
+
+// overall this is an overloaded constructor which used as a backup whenevre you want to shorter or higher up the demand without error occure.

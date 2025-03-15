@@ -1,0 +1,45 @@
+# Main
+
+package core;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Car car = new Car();
+		Vehicle any = new Vehicle();
+		
+		any.ride();
+		car.ride();
+		}
+}
+
+
+
+# Car
+
+package core;
+
+public class Car extends Vehicle{
+	void ride() {
+		System.out.println("VROOOOOOOOOOOOOM");
+	}
+}
+
+# Vehicle
+
+package core;
+
+public class Vehicle {
+	
+	void ride() {
+		System.out.println("Vroom Vroom...");
+	}
+	
+}
+
+
+
+// overridden is used to add additional info to a class as newly and if there
+// are no any newly add, it will use the default methods in the previous declared
+// class

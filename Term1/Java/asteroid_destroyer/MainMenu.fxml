@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="223.0" prefWidth="459.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="txtName" layoutX="110.0" layoutY="179.0" prefHeight="25.0" prefWidth="239.0" />
+      <Label fx:id="Name" alignment="CENTER" contentDisplay="CENTER" layoutX="144.0" layoutY="32.0" prefHeight="118.0" prefWidth="171.0" text="Name">
+         <font>
+            <Font size="52.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnGoBack" layoutX="358.0" layoutY="150.0" mnemonicParsing="false" onAction="#goMainMenu" prefHeight="59.0" prefWidth="87.0" text="Go Back" />
+      <Button fx:id="btnSayhi" layoutX="14.0" layoutY="150.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="81.0" text="Hi" />
+   </children>
+</Pane>

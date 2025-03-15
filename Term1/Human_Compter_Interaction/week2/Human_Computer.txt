@@ -1,0 +1,27 @@
+Human 
+
+# HCI: The importance and understanding between us human and computer are related.
+
+# Human Perception and Communication: Human process information through input-output channels, memory, and processing.
+_ Human Information Processing: Humans process information through input-output channels, memory, and cognitive processing.
+
+# Vision and Hearing: 5 senses of individual as human being.
+_ Input-Output Channels: Vision, hearing, touch, smell, and taste contribute to information intake.
+
+# Memory and Processing: Covers the types of human memory (short-term and long-term) and how humans process information for decision-making, reasoning, and problem-solving.
+_ Human Memory: Short-term and long-term memory store and retrieve information.
+_ Human Processing: Decision-making, reasoning, and problem-solving are complex cognitive functions.
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Computer
+
+# Computer Devices: All devices should have user-friendly interfaces and accessibility.
+
+# Input Methods: Using the right equipment for better efficiency.
+
+# Pointing Devices: Touchpads, trackballs, joysticks, and touch screens, crucial for navigation and precision tasks.
+
+# Display Technologies: CRT, LCD, and LED monitors, highlighting their impact on visual output, energy consumption, and user experience.
+

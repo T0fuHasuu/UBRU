@@ -1,0 +1,23 @@
+@ Interaction is the process of being able to communication with machine and digital through interface.
+
+@ 2 types of interaction :
+_ Indirect : using interface to communicate.
+_ direct : putting into command.
+
+@ Interaction can be received through touch screen, microphone, mouse etc....
+
+@ Interaction should be include :
+_ Domain : field of wanted studies
+_ Goal : what it wants
+_ Task : procedure in order to make it
+_ Intention : For what purpose.
+
+@ Part 2 :
+
+-Spreadsheets: Users can input or modify data, create graphs, and perform complex calculations.
+
+- Natural Language: Familiar to users but can cause ambiguity due to variations in pronunciation.
+
+- 3-Dimensional Interface: Includes Virtual Reality (VR) and Augmented Reality (AR) for immersive experiences.
+
+- Ergonomics: Focuses on optimizing work environments to match human physical characteristics for safety and efficiency.

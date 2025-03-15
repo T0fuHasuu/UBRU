@@ -1,0 +1,53 @@
+# Main
+
+package core;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Car car = new Car();
+		Bicycle bike = new Bicycle();
+		car.go();
+		bike.stop();
+		
+		System.out.println(car.doors);
+		System.out.println(bike.pedals);
+		}
+}
+
+# Car
+
+package core;
+
+public class Car extends Vehicle{
+	int wheels = 4;
+	int doors = 4;
+}
+
+# Bicycle
+
+package core;
+
+public class Bicycle extends Vehicle{
+	int wheels = 2;
+	int pedals = 2;
+}
+
+# Vehicle
+
+package core;
+
+public class Vehicle {
+	double speed;
+	void go() {
+		System.out.println("Moving");
+	}
+	void stop() {
+		System.out.println("Stopped");
+	}
+}
+
+
+// To sum it all up, with inheritance; any methods in another class can be import into another class and make it 2 differently.
+// while also keep the minimalist and standard.

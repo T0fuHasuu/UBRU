@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Seat Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        select, button, input {
+            margin: 10px 0;
+            padding: 5px;
+        }
+        .seats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .seat {
+            padding: 10px;
+            text-align: center;
+            background-color: #f0f0f0;
+            border: none;
+            cursor: pointer;
+        }
+        .seat.selected {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .seat.unavailable {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        #confirm {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #message, #bookings {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bus Seat Selection</h1>
+    <input type="text" id="userName" placeholder="Enter your name">
+    <select id="departure">
+        <option value="">Select Departure</option>
+    </select>
+    <select id="destination">
+        <option value="">Select Destination</option>
+    </select>
+    <div class="seats"></div>
+    <button id="confirm">Confirm</button>
+    <div id="message"></div>
+    <div id="bookings"></div>
+
+    <script>
+        const provinces = ['Bangkok', 'Chiang Mai', 'Phuket', 'Pattaya', 'Ayutthaya'];
+        const departureSelect = document.getElementById('departure');
+        const destinationSelect = document.getElementById('destination');
+        const seatsContainer = document.querySelector('.seats');
+        const confirmButton = document.getElementById('confirm');
+        const messageDiv = document.getElementById('message');
+        const bookingsDiv = document.getElementById('bookings');
+        const userNameInput = document.getElementById('userName');
+
+        let seatAvailability = {};
+        let selectedSeats = [];
+        let bookings = [];
+        let userCount = 0;
+
+        // Populate dropdowns
+        provinces.forEach(province => {
+            departureSelect.innerHTML += `<option value="${province}">${province}</option>`;
+            destinationSelect.innerHTML += `<option value="${province}">${province}</option>`;
+        });
+
+        // Create seats
+        for (let i = 1; i <= 32; i++) {
+            const seatButton = document.createElement('button');
+            seatButton.className = 'seat';
+            seatButton.textContent = i;
+            seatButton.addEventListener('click', () => toggleSeat(i));
+            seatsContainer.appendChild(seatButton);
+        }
+
+        // Initialize seat availability
+        provinces.forEach(dep => {
+            provinces.forEach(dest => {
+                if (dep !== dest) {
+                    const route = `${dep}-${dest}`;
+                    seatAvailability[route] = Array.from({length: 32}, (_, i) => i + 1);
+                }
+            });
+        });
+
+        function toggleSeat(seatNumber) {
+            const route = `${departureSelect.value}-${destinationSelect.value}`;
+            if (!seatAvailability[route] || !seatAvailability[route].includes(seatNumber)) return;
+
+            const seatIndex = selectedSeats.indexOf(seatNumber);
+            if (seatIndex > -1) {
+                selectedSeats.splice(seatIndex, 1);
+            } else {
+                selectedSeats.push(seatNumber);
+            }
+            updateSeatDisplay();
+        }
+
+        function updateSeatDisplay() {
+            const route = `${departureSelect.value}-${destinationSelect.value}`;
+            document.querySelectorAll('.seat').forEach((seat, index) => {
+                const seatNumber = index + 1;
+                seat.classList.remove('selected', 'unavailable');
+                if (selectedSeats.includes(seatNumber)) {
+                    seat.classList.add('selected');
+                } else if (!seatAvailability[route] || !seatAvailability[route].includes(seatNumber)) {
+                    seat.classList.add('unavailable');
+                }
+            });
+        }
+
+        function confirmBooking() {
+            const userName = userNameInput.value.trim();
+            const departure = departureSelect.value;
+            const destination = destinationSelect.value;
+            const route = `${departure}-${destination}`;
+
+            if (!userName || !departure || !destination || selectedSeats.length === 0) {
+                messageDiv.textContent = 'Please enter your name, select departure, destination, and at least one seat.';
+                return;
+            }
+
+            // Update seat availability
+            seatAvailability[route] = seatAvailability[route].filter(seat => !selectedSeats.includes(seat));
+
+            // Increment user count and create booking info
+            userCount++;
+            const bookingInfo = {
+                userId: `user${userCount}`,
+                name: userName,
+                departure,
+                destination,
+                seats: selectedSeats
+            };
+            bookings.push(bookingInfo);
+
+            console.log('Booking confirmed:', bookingInfo);
+            messageDiv.textContent = `Booking confirmed for ${userName}! Seats: ${selectedSeats.join(', ')}`;
+            
+            updateBookingsDisplay();
+            
+            // Reset selection
+            userNameInput.value = '';
+            selectedSeats = [];
+            updateSeatDisplay();
+        }
+
+        function updateBookingsDisplay() {
+            bookingsDiv.innerHTML = '<h2>Current Bookings:</h2>';
+            bookings.forEach(booking => {
+                bookingsDiv.innerHTML += `
+                    <p>${booking.userId} (${booking.name}): ${booking.departure} -> ${booking.destination}: Seats ${booking.seats.join(', ')}</p>
+                `;
+            });
+        }
+
+        departureSelect.addEventListener('change', updateSeatDisplay);
+        destinationSelect.addEventListener('change', updateSeatDisplay);
+        confirmButton.addEventListener('click', confirmBooking);
+    </script>
+</body>
+</html>

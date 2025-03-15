@@ -1,0 +1,42 @@
+_ Sender/Source : Originate Encodes the message into a form suitable for transmission.
+_ Message : being communicate and transfer.
+_ Channel : category of which type of file should be in their places.
+ _ Receiver : The intended recipient of the message. Decodes the message to understand its meaning.
+
+
+@ The 7 C's of Communication:
+
+Clear: Easy to understand.
+Correct: Accurate and free of errors.
+Courteous: Respectful and considerate.
+Consideration: Taking the receiver's perspective into account.
+Concise: Brief and to the point.
+Concrete: Specific and supported by facts.
+Complete: Contains all necessary information.
+
+@ One way communication : it's like a display which doesn't need an immediate response such as TV, Radio...etc
+
+@ Two way communication : it's to hold a conversation connection with the other sender creating an immediate response to each other such as meeting, call..etc
+
+@ Cyberbullying is bullying that happens online. It can involve threats, insults, spreading rumors, or sharing embarrassing info.
+
+@ Identity theft is when someone steals your personal info (like name, SSN, credit card) and uses it to pretend to be you.
+
+@ Stop cyberbullying:
+_ Ignore bullies.
+_ Block & report them.
+_ Tell a trusted adult.
+_ Be kind online.
+_ Strong passwords.
+_ Privacy settings.
+
+@ Statics of using internet for each usage or the most 
+
+# Assigment :
+
+| Exercises at the end of Chapter 4 |
+| Have students tell you how to deal with the hypothetical situation as follows. |
+| 1. When a friend just broke up with his girlfriend. How do you advise your friends to let go without shutting down Facebook account? |
+| 2. When a young man/girl comes to flirt on Facebook. Then invite me on a date How to go on a date without being tricked |
+| 3. When there's news that there's a drama that we stole our friend's boyfriend. But it's not true. by writing negative news about us on Facebook How do we cope? |
+| service organization |

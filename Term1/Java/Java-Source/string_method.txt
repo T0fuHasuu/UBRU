@@ -1,0 +1,22 @@
+package core;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+	
+		//String method
+		
+		String name = "Yuth    ";
+		
+//		boolean result = name.equalsIgnoreCase("Yuth");
+//		int result = name.length();
+//		char result = name.charAt(0);
+//		int result = name.indexOf("u");
+//		boolean result = name.isEmpty();
+//		String result = name.toUpperCase();		
+//		String result = name.trim();
+		String result = name.replace("u", "Y");
+		System.out.println(result);
+		
+	}
+}

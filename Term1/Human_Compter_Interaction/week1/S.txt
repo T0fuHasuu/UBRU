@@ -1,0 +1,19 @@
+Mostly talked about will be:
+
+# HCI Fundamentals: Explores the basics of Human-Computer Interaction (HCI), including its principles and its relationship with other scientific fields.
+
+# Usability and Design: Discusses the importance of usability, utility, and the difference between User Interface (UI) and User Experience (UX).
+
+# Interdisciplinary Nature: Highlights HCI’s interdisciplinary approach, integrating computer science, psychology, and design.
+
+# Practical Applications: Examines the role of HCI in everyday technology like smartphones, ATMs, and medical devices.
+
+@Key takeaways:
+
+_ Everything has it own identity to let user have a better time remembering the unique each.
+
+_ When it's come to generalize, everything is neither correct or incorrect in it own way.
+
+_ UI: user interface which bring people more clue of how each function on the system works act as an outer layer.
+
+_ UX: user experience which connect the layer into interaction from the user and functional of what have been coded.

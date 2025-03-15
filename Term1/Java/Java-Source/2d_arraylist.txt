@@ -1,0 +1,32 @@
+package core;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+	
+		 // 2D ArraList 
+		
+		ArrayList<ArrayList<String>> shopping = new ArrayList();
+		
+		ArrayList<String> backery = new ArrayList();
+		backery.add("Pasta");
+		backery.add("Rice");
+		backery.add("Pizza");
+		
+		ArrayList<String> produce = new ArrayList();
+		produce.add("Tomatoe");
+		produce.add("Wheat");
+		produce.add("Potato");
+		
+		ArrayList<String> drink = new ArrayList();
+		drink.add("Coke");
+		drink.add("Pepsi");
+		
+		shopping.add(backery);
+		shopping.add(produce);
+		shopping.add(drink);
+		
+		System.out.println(shopping.get(0).get(2));
+		
+	}
+}

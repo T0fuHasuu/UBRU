@@ -1,0 +1,29 @@
+package core;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+	
+		int temp = 25;
+		
+		if(temp > 30) {
+			System.out.println("It is hot outside");
+		}
+		else if(temp >=20 && temp <=30) {
+			System.out.println("It is warm outside");
+		}else {
+			System.out.println("It is cold");
+		}
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("q/Q to quit");
+		String response = scanner.next();
+		
+		if(!response.equals("q") && !response.equals("Q")) {
+			System.out.println("Still in the game");
+		}else {
+			System.out.println("Quited");
+		}
+		// The logical operators such as ||, && and !
+
+	}
+}

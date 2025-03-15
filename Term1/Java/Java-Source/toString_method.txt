@@ -1,0 +1,48 @@
+# Main.java
+
+package core;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		//toString() special method all objects inherit.
+		
+		wife waifu = new wife();
+		
+//		System.out.println(waifu.name);
+//		System.out.println(waifu.condition);
+//		System.out.println(waifu.color);
+//		System.out.println(waifu.age);
+//		
+//		System.out.println(waifu.toString());
+		System.out.println(waifu);
+		
+		
+	}
+}
+
+
+
+
+
+# wife.java
+
+package core;
+
+
+public class wife{
+	
+	String name = "Yae";
+	String condition = "Hot";
+	String color = "Pink";
+	int age = 1000;
+	
+	public String toString() {
+	
+		return name + "\n" + condition + "\n" + color + "\n" + age;
+	}
+	
+}
+
+

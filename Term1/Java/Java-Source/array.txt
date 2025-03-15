@@ -1,0 +1,31 @@
+package core;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+	
+		//Nested loop is a loop in a loop
+		
+		Scanner x = new Scanner(System.in);
+		int rows;
+		int cols;
+		String sym = "";
+		
+		System.out.println("enter rows: ");
+		rows = x.nextInt();
+		System.out.println("enter columns: ");
+		cols = x.nextInt();
+		System.out.println("enter symbol: ");
+		sym = x.next();
+		
+		for(int i = 1; i <= rows; i++) {
+			System.out.println();
+			for(int j = 1; j <= cols; j++) {
+				System.out.print(sym);
+			}
+		}
+		
+		
+		
+	}
+}

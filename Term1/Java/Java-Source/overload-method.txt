@@ -1,0 +1,31 @@
+package core;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		//Overload methods = method which share the same name but
+		// 					different parameters
+		//					method name + parameter = method signature
+		
+		int x = add(1,2);
+		System.out.println(x);
+		
+		
+	}
+	static int add(int a, int b) {
+		System.out.println("This is overload method #1");
+		return a + b;
+	}
+	static int add(int a, int b, int c) {
+		System.out.println("This is overload method #2");
+		return a + b + c;
+	}
+	static int add(int a, int b, int c, int d) {
+		System.out.println("This is overload method #3");
+		return a + b + c + d;
+	}
+}
+
+// Meaning that everything which already code into method will be choose as the possibility to be executed.
+// Can be use in double string and so on

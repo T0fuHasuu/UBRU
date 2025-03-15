@@ -1,0 +1,67 @@
+# Main
+
+package core;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		// super = keyword refers to superclass which is parent of an object
+		// similar example to this keyword
+		
+		Car hero1 = new Car("Batman", 30, "Seggs");
+		Car hero12 = new Car("X", 100, "Slice");
+		
+//		System.out.println(hero1.name);
+//		System.out.println(hero1.age);
+//		System.out.println(hero1.power);
+		
+		System.out.println(hero12.toString());
+		
+		}
+}
+
+# Car
+
+package core;
+
+public class Car extends Vehicle{
+	
+	String power;
+	
+	Car(String name, int age, String power){
+		super(name,age);
+		this.power = power;
+		
+	}
+	public String toString() {
+		return super.toString() + this.power;
+	}
+	
+}
+
+
+# Vehicle
+
+package core;
+
+public class Vehicle {
+	
+	String name;
+	int age;
+	
+	Vehicle(String name, int age){
+		this.name = name;
+		this.age = age;
+	}
+	
+	public String toString() {
+		return this.name + "\n" + this.age + "\n";
+	}
+	
+}
+
+
+
+// super keyword are like function, or a continue or declaration, you dont need to declare it to another class a time or another
+. Just super(previous declare or any variable u want); and then continue with the declare.
