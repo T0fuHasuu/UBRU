@@ -1,0 +1,42 @@
+// ชื่อวัน ในรูปแบบอาร์เรย์ แบบที่ 1
+String[] days = new String[7];
+days[0] = "Monday";
+days[1] = "Tuesday";
+days[2] = "Wednesday";
+days[3] = "Thursday";
+days[4] = "Friday";
+days[5] = "Saturday";
+days[6] = "Sunday";
+
+// ชื่อวัน ในรูปแบบอาร์เรย์ แบบที่ 2
+String[] days = {"Monday","Tuesday",
+	"Wednesday","Thursday","Friday",
+	"Saturday","Sunday"};
+
+// ชื่อวันและตัวย่อ ในรูปแบบอาร์เรย์ 2 มิติ แบบที่ 1
+String[][] days = new String[7][2];
+days[0][0] = "Monday";
+days[1][0] = "Tuesday";
+days[2][0] = "Wednesday";
+days[3][0] = "Thursday";
+days[4][0] = "Friday";
+days[5][0] = "Saturday";
+days[6][0] = "Sunday";
+days[0][1] = "MON";
+days[1][1] = "TUE";
+days[2][1] = "WED";
+days[3][1] = "THU";
+days[4][1] = "FRI";
+days[5][1] = "SAT";
+days[6][1] = "SUN";
+
+// ชื่อวันและตัวย่อ ในรูปแบบอาร์เรย์ 2 มิติ แบบที่ 2
+String[][] days = {
+	{"Monday","MON"},
+	{"Tuesday","TUE"},
+	{"Wednesday","WED"},
+	{"Thursday","THU"},
+	{"Friday","FRI"},
+	{"Saturday","SAT"},
+	{"Sunday","SUN"}
+};
